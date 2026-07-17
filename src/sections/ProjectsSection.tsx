@@ -248,45 +248,56 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           const pad3 = project.padding?.[2] || "p-0";
 
           return (
-            <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-4 w-full flex-grow items-stretch mt-2">
-              {/* Col 1: Stacked Images */}
-              <div className="flex flex-col gap-4 justify-between">
-                <div 
-                  className={`w-full overflow-hidden rounded-[25px] sm:rounded-[35px] md:rounded-[40px] border border-[#D7E2EA]/10 shadow-lg ${bg1} ${pad1}`}
-                  style={{ height: 'clamp(130px, 16vw, 230px)' }}
-                >
-                  <img 
-                    src={project.images[0]} 
-                    alt={`${project.name} preview 1`} 
-                    loading="lazy"
-                    decoding="async"
-                    className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 hover:scale-108`}
-                  />
+            <div className="flex flex-col gap-3 w-full">
+              <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-4 w-full flex-grow items-stretch mt-2">
+                {/* Col 1: Stacked Images */}
+                <div className="flex flex-col gap-4 justify-between">
+                  <div 
+                    className={`w-full overflow-hidden rounded-[25px] sm:rounded-[35px] md:rounded-[40px] border border-[#D7E2EA]/10 shadow-lg ${bg1} ${pad1}`}
+                    style={{ height: 'clamp(130px, 16vw, 230px)' }}
+                  >
+                    <img 
+                      src={project.images[0]} 
+                      alt={`${project.name} preview 1`} 
+                      loading="lazy"
+                      decoding="async"
+                      className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 hover:scale-108`}
+                    />
+                  </div>
+                  <div 
+                    className={`w-full overflow-hidden rounded-[25px] sm:rounded-[35px] md:rounded-[40px] border border-[#D7E2EA]/10 shadow-lg ${bg2} ${pad2}`}
+                    style={{ height: 'clamp(160px, 22vw, 340px)' }}
+                  >
+                    <img 
+                      src={project.images[1]} 
+                      alt={`${project.name} preview 2`} 
+                      loading="lazy"
+                      decoding="async"
+                      className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 hover:scale-108`}
+                    />
+                  </div>
                 </div>
-                <div 
-                  className={`w-full overflow-hidden rounded-[25px] sm:rounded-[35px] md:rounded-[40px] border border-[#D7E2EA]/10 shadow-lg ${bg2} ${pad2}`}
-                  style={{ height: 'clamp(160px, 22vw, 340px)' }}
-                >
-                  <img 
-                    src={project.images[1]} 
-                    alt={`${project.name} preview 2`} 
-                    loading="lazy"
-                    decoding="async"
-                    className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 hover:scale-108`}
-                  />
-                </div>
-              </div>
 
-              {/* Col 2: Tall Image */}
-              <div className={`overflow-hidden rounded-[25px] sm:rounded-[35px] md:rounded-[40px] border border-[#D7E2EA]/10 shadow-lg min-h-[220px] md:min-h-0 ${bg3} ${pad3}`}>
-                <img 
-                  src={project.images[2]} 
-                  alt={`${project.name} showcase`} 
-                  loading="lazy"
-                  decoding="async"
-                  className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 hover:scale-108`}
-                />
+                {/* Col 2: Tall Image */}
+                <div className={`overflow-hidden rounded-[25px] sm:rounded-[35px] md:rounded-[40px] border border-[#D7E2EA]/10 shadow-lg min-h-[220px] md:min-h-0 ${bg3} ${pad3}`}>
+                  <img 
+                    src={project.images[2]} 
+                    alt={`${project.name} showcase`} 
+                    loading="lazy"
+                    decoding="async"
+                    className={`w-full h-full ${fit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 hover:scale-108`}
+                  />
+                </div>
               </div>
+              
+              {/* Dynamic Subtitle */}
+              {project.number === "02" && (
+                <div className="text-right pr-2">
+                  <span className="text-xs sm:text-sm font-light italic text-[#D7E2EA]/40 tracking-wider">
+                    got an idea, I can deploy it
+                  </span>
+                </div>
+              )}
             </div>
           );
         })()}
