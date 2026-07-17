@@ -26,16 +26,16 @@ export const HeroSection: React.FC = () => {
       </FadeIn>
 
       {/* 2. Headline area (Centered, top aligned) */}
-      <div className="flex-grow flex justify-center items-start pt-16 sm:pt-20 md:pt-24 px-6 md:px-10 z-10 select-none">
+      <div className="flex-grow flex justify-center items-start pt-[15vh] sm:pt-20 md:pt-24 px-6 md:px-10 z-10 select-none">
         <FadeIn 
           delay={0.15} 
           y={40} 
           className="w-full flex flex-col items-center gap-2 sm:gap-3"
         >
-          <span className="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-[#D7E2EA]/50 text-center">
+          <span className="text-[12px] sm:text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-[#D7E2EA]/50 text-center">
             SOCIAL MEDIA • WEBSITES • AI AUTOMATION
           </span>
-          <h1 className="hero-heading font-black uppercase tracking-tight leading-none text-center sm:whitespace-nowrap w-full text-[10vw] sm:text-[11vw] md:text-[12vw] lg:text-[13vw]">
+          <h1 className="hero-heading font-black uppercase tracking-tight leading-none text-center sm:whitespace-nowrap w-full text-[11.5vw] sm:text-[11vw] md:text-[12vw] lg:text-[13vw]">
             Hi, i&apos;m zubeda
           </h1>
         </FadeIn>
