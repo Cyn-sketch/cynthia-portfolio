@@ -65,11 +65,11 @@ export const ServicesSection: React.FC = () => {
                 className="w-full"
               >
                 <div 
-                  className="flex flex-row items-start gap-4 sm:gap-8 md:gap-12 py-8 sm:py-10 md:py-12 border-b border-[rgba(12,12,12,0.15)]"
+                  className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8 md:gap-12 py-8 sm:py-10 md:py-12 border-b border-[rgba(12,12,12,0.15)]"
                 >
                   {/* Left Column: Number */}
                   <span 
-                    className="font-black text-[#0C0C0C] leading-none select-none w-20 sm:w-28 md:w-36 flex-shrink-0"
+                    className="font-black text-[#0C0C0C] leading-none select-none w-auto sm:w-28 md:w-36 flex-shrink-0"
                     style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
                   >
                     {service.number}

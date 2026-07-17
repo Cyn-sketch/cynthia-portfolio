@@ -35,7 +35,7 @@ export const HeroSection: React.FC = () => {
           <span className="text-[10px] sm:text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-[#D7E2EA]/50 text-center">
             SOCIAL MEDIA • WEBSITES • AI AUTOMATION
           </span>
-          <h1 className="hero-heading font-black uppercase tracking-tight leading-none text-center whitespace-nowrap w-full text-[10vw] sm:text-[11vw] md:text-[12vw] lg:text-[13vw]">
+          <h1 className="hero-heading font-black uppercase tracking-tight leading-none text-center sm:whitespace-nowrap w-full text-[10vw] sm:text-[11vw] md:text-[12vw] lg:text-[13vw]">
             Hi, i&apos;m zubeda
           </h1>
         </FadeIn>

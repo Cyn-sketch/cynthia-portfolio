@@ -195,7 +195,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           
           if (project.images.length > 3) {
             const isFour = project.images.length === 4;
-            const gridClass = isFour ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-2 md:grid-cols-3";
+            const gridClass = isFour ? "grid-cols-2" : "grid-cols-2 md:grid-cols-3";
             
             return (
               <div className="flex flex-col gap-3 w-full">
